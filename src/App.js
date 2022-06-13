@@ -1,10 +1,7 @@
 import React from "react";
 import LineChart from "./components/LineChart";
 import BarChart from "./components/BarChart";
-import Form from "./components/formulario";
 import {
-  createList,
-  findPosicao,
   getDesvioPadrao,
   getMedia,
   getMediaLista,
@@ -23,8 +20,8 @@ const App = () => {
 
   const planilha = Planilha.Planilha;
   const handleSetData = () => {
-    setListaFechamentos(planilha); //(createList(planilha,findPosicao(novaData,planilha)))
-    setMediaLista(getMediaLista(planilha)); //(createList(planilha,findPosicao(novaData,planilha))))
+    setListaFechamentos(planilha);
+    setMediaLista(getMediaLista(planilha));
   };
   useEffect(() => {
     handleSetData();
